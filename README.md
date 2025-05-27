@@ -1,3 +1,31 @@
+1. Make sure your ESP32 is configured to send data over Bluetooth with the same format as it does over MQTT.
+  -The data should be JSON formatted with the same fields (acc_X, acc_Y, acc_Z, gyro_X, gyro_Y, gyro_Z).
+   
+2.On your ESP32, you'll need to:
+  -Set up a Bluetooth Low Energy (BLE) server
+  -Create a characteristic with the UUID "0000FFE1-0000-1000-8000-00805F9B34FB" (or update the UUID in the code to match your ESP32's UUID)
+  -Send the sensor data through this characteristic
+  
+3.In the Flutter app:
+  -Click the menu button in the top-right corner
+  -Select "Connect via Bluetooth"
+  -The app will scan for ESP32 devices and connect to the first one it finds
+  -Once connected, you can start collecting data just like with MQTT
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 This repository contains the Flutter app code for the **TinyML** project. The app uses the **MQTT protocol** to communicate with a **wearable fit watch** and fetch sensor data. This README provides instructions on how to set up and configure the app to mimic its behavior locally.
 
 ---
